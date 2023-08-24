@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.menu-container {
+  /*...*/
+  display: flex;                /* This enables the flexbox layout mode */
+  justify-content: center;      /* We can use it to center our .menu */
+  color: #fff;
+  background-color: #5995DA;    /* Blue */
+  padding: 20px 0;
+}
+.menu {
+  /*border: 1px solid #fff;*/       /* For debugging */
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+.links {
+  /*border: 1px solid #fff;*/       /* For debugging */
+  display: flex;
+  justify-content: flex-end;
+}
+.login {
+  margin-left: 20px;
+}
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            /* Vertical alignment is defined by adding an align-items property to a flex container.*/
+}
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;              /* Adding the following flex-wrap property forces items that don’t fit to get bumped down to the next row*/
+  flex-direction: row;
+  align-items: center;
+}
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+.first-item {
+  order: 1;
+}
+.last-item {
+  order: -1;
+}
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;                          /*That flex: 1; line tells the items to stretch to match the width of .footer.*/
+}
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;                  /* Without that flex: initial; line, the flex: 1; declaration would be inherited from the .footer-item rule, causing the width properties to be ignored. initial fixes this, and we get a flexible layout that also contains fixed-width items.*/
+  width: 300px;
+}
+.signup {
+  margin-left: auto;
+}
